@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root 'pages#index'
+
+  get 'contactenos' => 'pages#contact', as: :contactenos
+  get 'nosotros' => 'pages#about', as: :nosotros
+  get 'servicios' => 'pages#services', as: :servicios
+
+
   resources :positions
   resources :treatments
   # The priority is based upon order of creation: first created -> highest priority.
