@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-5">
+       <button type="button" class="btn btn-primary" id="modal-formCita" href="#modal-cita" data-toggle="modal">Solicita tu cita ahora!!!</button>
+      
+      <div class="modal fade" id="modal-cita" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+               
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                ×
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                Solicitud de cita Odontologica
+              </h4>
+            </div>
+            <div class="modal-body">
+      <form class="form-horizontal" name="formCita" id="formCita" action="" method="POST">
+    
+        <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="form-control" placeholder="Ingresar Nombres y Apelllidos" id="nombres" name="nombres" >
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12">
+                <input type="email" class="form-control" placeholder="Ingresar email" id="email" name="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12">
+                <input type="text" class="form-control" placeholder="Ingresar fecha" id="fecha" name="fecha">
+            </div>     
+        </div>
+        <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input type="radio" name="tipocita" id="tipocita" autocomplete="off" value="cita"> Sacar cita
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="tipocita" id="tipocita" autocomplete="off" value="informacion"> Solicitar información
+        </label>
+        <br><br>
+      </div>
+        <div class="form-group">
+            <div class="col-xs-12">
+                <textarea rows="3" class="form-control" placeholder="Motivo de la consulta" id="motivo_consulta" name="motivo_consulta"></textarea>
+            </div>
+        </div>
+    
+        <p>También puede separar su cita llamando al teléfono 351-4837</p>
+        
+
+            </div>
+            <div class="modal-footer">
+               
+                <input type="submit" class="btn btn-primary" value="Enviar">
+                <input type="reset" class="btn btn-default" value="Limpiar">
+                <button type="button" class="btn btn-default" data-dismiss="modal"> Cerrar </button> 
+            </div>
+          </div>
+    </form>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>

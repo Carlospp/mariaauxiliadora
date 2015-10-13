@@ -1,2 +1,46 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<%= provide(:contact,"active") %>
+<%= provide(:title,"Contactenos") %>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-6 ">
+      <form class="form-horizontal" role="form" name="loginform" id="loginform" action="logcliente.php" mthod="POST">
+        <h2 class="text-left text-primary">Contáctenos</h2>
+        <div class="form-group ">
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="nombre" id="nombre" placeholder="ingresar Nombres" required/>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-sm-10">
+            <input class="form-control" type="email" name="email" id="email" placeholder="Ingresar correo" required/>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Ingresar numero telefónico" required/>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="comentario" id="comentario" placeholder="Ingresar comentario" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10">
+             <button type="submit"name="login" value="Entrar" class="btn btn-default">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 ">
+      <h3 class="text-left text-primary">Ubicación</h3>
+              <p>Urb. El Porvenir Mz. C Lt. 18 - 2do piso - Ate
+                  (frente al Banco de Credito)
+              </p>
+              <h4>Telefono: </h4><p>351 4837</p>
+              <h4>Email: <a href="mailto:hebmartinez@hotmail.com">hebmartinez@hotmail.com</a></h4>
+    </div>
+  </div>
+</div>
+<br><br>
+<iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1593.9665367917305!2d-76.92488643061502!3d-12.029694567249676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d-12.0295753!2d-76.9248791!5e0!3m2!1ses!2ses!4v1442507249250" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -1,2 +1,74 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<%= provide(:index,"active") %>
+<%= provide(:title,"Inicio") %>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="<%= asset_path("cuidado.jpg") %>" />
+    </div>
+    <div class="item">
+      <img src="<%= asset_path("precios.jpg") %>" />
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center text-info">
+        Ponte en buenas manos, confía en nuestros odontólogos y equipo<br> médico para dar solución a tus problemas dentales
+      </h3>
+      <%= render 'shared/formcita' %><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg" />
+            <div class="caption">
+              <h3>
+                Nuestra clínica
+              </h3>
+              <p>
+                Todos nuestros centros disponen de tecnología de vanguardia para poder realizar cualquier especialidad. Las instalaciones están adaptados para personas con movilidad reducida.
+              </p>
+              <p>
+                <a class="btn" href="nosotros">Leer mas...</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
+            <div class="caption">
+              <h3>
+                Todos los tratamientos
+              </h3>
+              <p>
+                Con 4 centros especializados en todo tipo de tratamientos dentales, nuestro equipo de profesionales está especializado en ofrecer la solución idónea a tus problemas dentales.
+              </p>
+              <p>
+                 <a class="btn" href="servicios">Leer mas...</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
+            <div class="caption">
+              <h3>
+                 Dudas y preguntas
+              </h3>
+              <p>
+                Encuentra las soluciones a los problemas dentales que tanto te preocupan. Consulta con nuestros especialistas para realizarte tu tratamiento dental y recupera tu sonrisa.
+              </p>
+              <p>
+                <a class="btn" href="servicios">Leer mas...</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

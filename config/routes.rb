@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'servicios/estetica'=> 'services#aesthetic', as: :estetica
+
+  get 'services/endodontic'
+
+  get 'services/implant'
+
+  get 'services/orthodontic'
+
+  get 'services/periodontic'
+
+  get 'services/rehabilitation'=> 'services#rehabilitation', as: :rehabilitacion
+
+  get 'services/surgery'
+
   root 'pages#index'
 
   get 'contactenos' => 'pages#contact', as: :contactenos
