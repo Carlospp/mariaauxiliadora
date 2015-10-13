@@ -1,7 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
 <%= form_for(@treatment) do |f| %>
   <% if @treatment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@treatment.errors.count, "error") %> prohibited this treatment from being saved:</h2>
+      <h2><%= pluralize(@treatment.errors.count, "errores") %> evitaron que se pueda crear correctamente:</h2>
 
       <ul>
       <% @treatment.errors.full_messages.each do |message| %>
@@ -11,19 +14,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre,:class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :descripcion %><br>
-    <%= f.text_area :descripcion %>
+    <%= f.text_area :descripcion,:class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :costo %><br>
-    <%= f.text_field :costo %>
+    <%= f.text_field :costo,:class => 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Tratamiento" ,:class => 'btn btn-primary'%>
   </div>
 <% end %>
+<br>
+</div>
+</div>
+</div>

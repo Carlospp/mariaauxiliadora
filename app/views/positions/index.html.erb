@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Positions</h1>
-
-<table>
+<h2 class="col-md-offset-5">Listado de Cargos</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+<table class="table table-bordered table-condensed table-hover">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -18,14 +20,16 @@
         <td><%= position.nombre %></td>
         <td><%= position.descripcion %></td>
         <td><%= position.sueldo %></td>
-        <td><%= link_to 'Show', position %></td>
-        <td><%= link_to 'Edit', edit_position_path(position) %></td>
-        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'mostrar', position %></td>
+        <td><%= link_to 'Editar', edit_position_path(position) %></td>
+        <td><%= link_to 'Eliminar', position, method: :delete, data: { confirm: 'Esta usted seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 
-<%= link_to 'New Position', new_position_path %>
+<%= link_to 'Nuevo Cargo', new_position_path %>
+</div>

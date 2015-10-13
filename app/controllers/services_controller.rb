@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  layout 'pages'
   def aesthetic
   end
 

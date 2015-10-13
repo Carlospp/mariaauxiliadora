@@ -28,7 +28,7 @@ class TreatmentsController < ApplicationController
 
     respond_to do |format|
       if @treatment.save
-        format.html { redirect_to @treatment, notice: 'Treatment was successfully created.' }
+        format.html { redirect_to @treatment, notice: 'Tratamiento creado correctamente' }
         format.json { render :show, status: :created, location: @treatment }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TreatmentsController < ApplicationController
   def update
     respond_to do |format|
       if @treatment.update(treatment_params)
-        format.html { redirect_to @treatment, notice: 'Treatment was successfully updated.' }
+        format.html { redirect_to @treatment, notice: 'Tratamiento actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @treatment }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TreatmentsController < ApplicationController
   def destroy
     @treatment.destroy
     respond_to do |format|
-      format.html { redirect_to treatments_url, notice: 'Treatment was successfully destroyed.' }
+      format.html { redirect_to treatments_url, notice: 'Tratamiento eliminado correctamente.' }
       format.json { head :no_content }
     end
   end

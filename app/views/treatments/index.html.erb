@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Treatments</h1>
-
-<table>
+<h2 class="col-md-offset-5">Listado de tratamientos</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+<table class="table table-bordered table-condensed table-hover">
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Descripcion</th>
+      <th>Descripción</th>
       <th>Costo</th>
       <th colspan="3"></th>
     </tr>
@@ -18,14 +20,17 @@
         <td><%= treatment.nombre %></td>
         <td><%= treatment.descripcion %></td>
         <td><%= treatment.costo %></td>
-        <td><%= link_to 'Show', treatment %></td>
-        <td><%= link_to 'Edit', edit_treatment_path(treatment) %></td>
-        <td><%= link_to 'Destroy', treatment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', treatment %></td>
+        <td><%= link_to 'Editar', edit_treatment_path(treatment) %></td>
+        <td><%= link_to 'Eliminar', treatment, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
 
 <br>
 
-<%= link_to 'New Treatment', new_treatment_path %>
+<%= link_to 'Nuevo Tratamiento', new_treatment_path %>
+</div>

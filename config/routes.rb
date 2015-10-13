@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
+
   get 'servicios/estetica'=> 'services#aesthetic', as: :estetica
 
-  get 'services/endodontic'
+  get 'servicios/endodoncia'=> 'services#endodontic', as: :endodoncia
 
-  get 'services/implant'
+  get 'servicios/implantes'=> 'services#implant', as: :implantes
 
-  get 'services/orthodontic'
+  get 'servicios/ortodoncia'=> 'services#orthodontic', as: :ortodoncia
 
-  get 'services/periodontic'
+  get 'servicios/periododoncia'=> 'services#periodontic', as: :periododoncia
 
-  get 'services/rehabilitation'=> 'services#rehabilitation', as: :rehabilitacion
+  get 'servicios/rehabilitacion'=> 'services#rehabilitation', as: :rehabilitacion
 
-  get 'services/surgery'
+  get 'servicios/cirugia'=> 'services#surgery', as: :cirugia
 
   root 'pages#index'
 

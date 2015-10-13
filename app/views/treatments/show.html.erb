@@ -1,19 +1,25 @@
-<p id="notice"><%= notice %></p>
+<h2 class="col-md-offset-4">Datos del tratamiento</h2>
+<p class="col-md-offset-4" id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-4">
+      <p>
+        <strong>Nombre:</strong>
+        <%= @treatment.nombre %>
+      </p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @treatment.nombre %>
-</p>
+      <p>
+        <strong>Descripción:</strong>
+        <%= @treatment.descripcion %>
+      </p>
 
-<p>
-  <strong>Descripcion:</strong>
-  <%= @treatment.descripcion %>
-</p>
+      <p>
+        <strong>Costo:</strong>
+        <%= @treatment.costo %>
+      </p>
 
-<p>
-  <strong>Costo:</strong>
-  <%= @treatment.costo %>
-</p>
-
-<%= link_to 'Edit', edit_treatment_path(@treatment) %> |
-<%= link_to 'Back', treatments_path %>
+<%= link_to 'Editar', edit_treatment_path(@treatment) %> |
+<%= link_to 'Atras', treatments_path %>
+</div>
+</div>
+</div>
