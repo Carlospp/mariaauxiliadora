@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if can? :create, @position %>
+  <%= link_to 'Editar', new_position_path(position) %>
+<% end %>
+
 <h2 class="col-md-offset-5">Listado de Cargos</h2>
 <div class="container-fluid">
   <div class="row">

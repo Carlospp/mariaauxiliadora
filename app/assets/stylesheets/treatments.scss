@@ -1,3 +1,15 @@
 // Place all the styles related to the treatments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body{
+  margin-left:1%;
+  font-size: 16px;
+}
+.navbar-top-links {
+  margin-left: 74% !important;
+}

@@ -1,3 +1,23 @@
 // Place all the styles related to the positions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body{
+  margin-left:1%;
+  font-size: 16px;
+}
+/* select.date{
+    width:200px;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+ */
+.navbar-top-links {
+  margin-left: 74% !important;
+}

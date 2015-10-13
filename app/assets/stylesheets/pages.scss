@@ -1,3 +1,85 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$celeste: #0296d7;
+
+$break-small: 360px;
+$break-medium: 767px;
+$break-large: 1200px;
+
+header{
+    width: 100%;
+    height: 200px;
+    background-image: url(image-path('cabecera.jpg'));
+    background-size: 100% 200px;
+    
+    @media screen and (max-width: $break-medium) {
+    background-image: url(image-path('cabecera360.jpg'));
+    }
+    @media screen and (max-width: $break-small) {
+    background-image: url(image-path('cabecera_movil.jpg'));
+    }
+
+}
+
+.nav.navbar.navbar-default{
+  margin-bottom: 0px !important;
+}
+.dropdown a{
+  color:$celeste;
+  
+}
+footer,.navbar-default{
+    background:$celeste;
+}
+.navbar-default,.panel-heading{
+    background:$celeste !important;
+    font-size: 1.5em;
+}
+.dropdown-menu li a{
+  color:$celeste !important;
+  @media screen and (max-width: $break-small) {
+    color:#fff;
+    background-color: #fff;
+  }
+}
+
+footer a,.navbar-default a{
+  color: #fff !important;
+}
+.navbar-default a:hover{
+  color:#000 !important;
+}
+.navbar-default .active a{
+  color:$celeste !important;
+}
+.panel-heading a{
+  color:#fff;
+  font-size: 1em;
+}
+
+#mapa{
+  width: 100%;
+  
+}
+footer{
+  @media screen and (max-width: $break-small) {
+    #footer_serv,#footer_no{
+      display: none;
+    }
+    img{
+      width: 15%;
+    }
+    img:first-child{
+      margin-left: 13%;
+    }
+    h3{
+      margin-top: 5px;
+      margin-bottom: -12px;
+      text-align: center;
+    }
+    color: #fff;
+    height: 84px;
+  }
+}

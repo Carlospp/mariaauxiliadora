@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title)%> | Clinica María Auxiliadora</title>
+  <link href="/assets/positions.scss" media="screen" rel="stylesheet" />
+  <link href="/assets/metisMenu.css" media="screen" rel="stylesheet" />
+  <link href="/assets/sb-admin-2.css" media="screen" rel="stylesheet" />
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+  <div class="navbar-header">
+
+  <%= render 'shared/navbar_admin' %>
+   
+</nav>
+<%= yield %>
+
+
+</body>
+</html>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :views
+  devise_for :users
   get 'servicios/estetica'=> 'services#aesthetic', as: :estetica
 
   get 'servicios/endodoncia'=> 'services#endodontic', as: :endodoncia

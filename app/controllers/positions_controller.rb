@@ -1,5 +1,7 @@
 class PositionsController < ApplicationController
+  layout 'intranet'
   before_action :set_position, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /positions
   # GET /positions.json
