@@ -2,11 +2,10 @@
 <html>
 <head>
   <title><%= yield(:title)%> | Clinica María Auxiliadora</title>
-  <link href="/assets/positions.scss" media="screen" rel="stylesheet" />
-  <link href="/assets/metisMenu.css" media="screen" rel="stylesheet" />
-  <link href="/assets/sb-admin-2.css" media="screen" rel="stylesheet" />
-<!--   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
- -->  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "/assetspositions", :media => "all" %>
+  <%= stylesheet_link_tag "/assetsmetisMenu", :media => "all" %>
+  <%= stylesheet_link_tag "/assetssb-admin-2", :media => "all" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
