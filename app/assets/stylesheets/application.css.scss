@@ -36,7 +36,7 @@ $break-large: 1200px;
     }
 
 }
-select.date{
+select.date,#employee_sexo,#employee_estado{
     width:32%;
     height: 30px;
     border-radius:5px;
@@ -72,7 +72,7 @@ footer a,.navbar-default a{
 .navbar-default a:hover{
   color:#000 !important;
 }
-.navbar-default .active a{
+#nav_principal .active a{
   color:$celeste !important;
 }
 .panel-heading a{

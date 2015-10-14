@@ -24,23 +24,26 @@
   </div>
   <div class="field form-group">
     <%= f.label :dni %><br>
-    <%= f.number_field :dni ,:class => 'form-control' %>
+    <%= f.text_field :dni ,:class => 'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :fecnac %><br>
     <%= f.date_select :fecnac, { :start_year => 1960, :end_year => 2015 , :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre']} ,:class => 'date datetest'%>
   </div>
   <div class="field form-group">
+    <% sexo={
+      'Masculino'=> 'M',
+      'Femenino'=> 'F',} %>
     <%= f.label :sexo %><br>
-    <%= f.text_field :sexo ,:class => 'form-control' %>
+    <%= f.select :sexo,sexo ,:class => 'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :telefono %><br>
-    <%= f.number_field :telefono ,:class => 'form-control' %>
+    <%= f.text_field :telefono ,:class => 'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :celular %><br>
-    <%= f.number_field :celular ,:class => 'form-control' %>
+    <%= f.text_field :celular ,:class => 'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :direccion %><br>
@@ -55,8 +58,11 @@
     <%= f.date_select :fecingreso, { :start_year => 2000, :end_year => 2015, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] } ,:class => 'date datetest' %>
   </div>
   <div class="field form-group">
+    <% estado={
+      'Activo'=> 'A',
+      'Inactivo'=> 'I',} %>
     <%= f.label :estado %><br>
-    <%= f.text_field :estado ,:class => 'form-control' %>
+    <%= f.select :estado,estado ,:class => 'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :codCOP %><br>
