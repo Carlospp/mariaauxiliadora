@@ -3,15 +3,14 @@
 <head>
   <title><%= yield(:title)%> | Clinica María Auxiliadora</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <link rel="stylesheet" href="/assets/sb-admin-2.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-  <div class="navbar-header">
-      <h4 class="text-left text-default col-md-offset-1">Bienvenido <%= current_user.email %></h4>
-  </div>
+<div class="navbar-header">
+  <h4 class="text-left text-default col-md-offset-1">Bienvenido <%= current_user.email %></h4>
+</div>
   <%= render 'shared/navbar_admin' %>
    
 </nav>

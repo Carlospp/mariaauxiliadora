@@ -36,6 +36,13 @@ $break-large: 1200px;
     }
 
 }
+select.date{
+    width:32%;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
 
 .nav.navbar.navbar-default{
   margin-bottom: 0px !important;
