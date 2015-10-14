@@ -2,22 +2,21 @@
 <html>
 <head>
   <title><%= yield(:title)%> | Clinica María Auxiliadora</title>
-  <%= stylesheet_link_tag "/assetspositions", :media => "all" %>
-  <%= stylesheet_link_tag "/assetsmetisMenu", :media => "all" %>
-  <%= stylesheet_link_tag "/assetssb-admin-2", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
   <div class="navbar-header">
-      <h4 class="text-left text-primary">Bienvenido <%= current_user.email %></h4>
+      <h4 class="text-left text-primary col-md-offset-1">Bienvenido <%= current_user.email %></h4>
   </div>
   <%= render 'shared/navbar_admin' %>
    
 </nav>
-<%= yield %>
-
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
