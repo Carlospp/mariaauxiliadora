@@ -76,4 +76,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.assets.precompile += %w(metisMenu.js sb-admin-2.js application.js)
+  config.assets.precompile += %w(metisMenu.css sb-admin-2.css)
 end

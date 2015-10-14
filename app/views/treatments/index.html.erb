@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h2 class="col-md-offset-5">Listado de tratamientos</h2>
+<p>
+  Descargar:
+  <%= link_to "CSV", treatments_path(format: "csv") %> |
+  <%= link_to "Excel", treatments_path(format: "xls") %>
+</p>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
