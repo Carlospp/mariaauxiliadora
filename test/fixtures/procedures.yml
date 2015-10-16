@@ -1,0 +1,109 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  feccreacion: 2015-10-15
+  horacreacion: 2015-10-15 14:09:14
+  employee_id: 
+  appointment: MyString
+  grupo: MyString
+  tratamiento: MyString
+  medicamentos: MyString
+  alergias: MyString
+  hemorragias: MyString
+  irradiaciones: MyString
+  sinusitis: MyString
+  respiratorias: MyString
+  cardiopatias: MyString
+  diabetes: MyString
+  fiebre: MyString
+  hepatitis: MyString
+  hipertension: MyString
+  otrasenfermedades: MyString
+  cepillado: MyString
+  hilo: MyString
+  otros: MyString
+  obsanamnesis: MyText
+  temperatura: MyString
+  pulso: MyString
+  tension: MyString
+  respiracion: MyString
+  mandibula: MyString
+  labios: MyString
+  lengua: MyString
+  paladar: MyString
+  boca: MyString
+  carrillos: MyString
+  glandulas: MyString
+  maxilares: MyString
+  senosmaxilares: MyString
+  masticadores: MyString
+  nervioso: MyString
+  vascular: MyString
+  linfatico: MyString
+  oclusion: MyString
+  obsfisico: MyText
+  abrasion: MyString
+  placacalificada: MyString
+  pulpar: MyString
+  placablanda: MyString
+  fluorosis: MyString
+  manchas: MyString
+  obsdental: MyString
+  causaexterna: MyString
+  finalidad: MyString
+  dxprincipal: MyString
+
+two:
+  patient_id: 
+  feccreacion: 2015-10-15
+  horacreacion: 2015-10-15 14:09:14
+  employee_id: 
+  appointment: MyString
+  grupo: MyString
+  tratamiento: MyString
+  medicamentos: MyString
+  alergias: MyString
+  hemorragias: MyString
+  irradiaciones: MyString
+  sinusitis: MyString
+  respiratorias: MyString
+  cardiopatias: MyString
+  diabetes: MyString
+  fiebre: MyString
+  hepatitis: MyString
+  hipertension: MyString
+  otrasenfermedades: MyString
+  cepillado: MyString
+  hilo: MyString
+  otros: MyString
+  obsanamnesis: MyText
+  temperatura: MyString
+  pulso: MyString
+  tension: MyString
+  respiracion: MyString
+  mandibula: MyString
+  labios: MyString
+  lengua: MyString
+  paladar: MyString
+  boca: MyString
+  carrillos: MyString
+  glandulas: MyString
+  maxilares: MyString
+  senosmaxilares: MyString
+  masticadores: MyString
+  nervioso: MyString
+  vascular: MyString
+  linfatico: MyString
+  oclusion: MyString
+  obsfisico: MyText
+  abrasion: MyString
+  placacalificada: MyString
+  pulpar: MyString
+  placablanda: MyString
+  fluorosis: MyString
+  manchas: MyString
+  obsdental: MyString
+  causaexterna: MyString
+  finalidad: MyString
+  dxprincipal: MyString

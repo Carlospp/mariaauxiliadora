@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> evitaron que se pueda crear correctamente:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group col-md-12">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-12">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-6">
+    <%= f.label :dni %><br>
+    <%= f.text_field :dni,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-6">
+    <% sexo={'Masculino'=> 'M',
+                      'Femenino'=> 'F',} %>
+    <%= f.label :sexo %><br>
+    <%= f.select :sexo,sexo,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-12">
+    <%= f.label :fecha_nacimiento %><br>
+    <%= f.date_select :fecnac , { :start_year => 2000, :end_year => 2015, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] } ,:class => 'date datetest'%>
+  </div>
+  <div class="field form-group col-md-6">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-6">
+    <%= f.label :celular %><br>
+    <%= f.text_field :celular,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-12">
+    <%= f.label :direccion %><br>
+    <%= f.text_area :direccion,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-12">
+    <%= f.label :email %><br>
+    <%= f.text_field :email,:class => 'form-control' %>
+  </div>
+  <div class="field form-group col-md-12">
+    <%= f.label :fecha_ingreso %><br>
+    <%= f.date_select :fecingreso , { :start_year => 2000, :end_year => 2015, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] } ,:class => 'date datetest'%>
+  </div>
+  <div class="field form-group col-md-12">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado,:class => 'form-control' %>
+  </div>
+  <div class="actions col-md-12">
+    <%= f.submit "Crear Paciente" ,:class => 'btn btn-primary' %>
+  </div>
+<% end %>
+<br>
+</div>
+</div>
+</div>

@@ -36,14 +36,63 @@ $break-large: 1200px;
     }
 
 }
-select.date,#employee_sexo,#employee_estado{
-    width:32%;
+.alert {
+    padding: 1px 0px 1px 20px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+select.date,#employee_sexo,#employee_estado,#procedure_grupo,#patient_fecnac_1i,
+        #patient_fecnac_2i,#patient_fecnac_3i{
+    width:32.8%;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+select#procedure_feccreacion_1i,select#procedure_feccreacion_3i{
+    width:29%;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+select#procedure_feccreacion_2i{
+    width:38%;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+select#patient_sexo{
+    width:100%;
     height: 30px;
     border-radius:5px;
     border: 1px solid #cccccc;
     background-color: #ffffff;
 }
 
+#procedure_employee_id,#patient_sexo{
+    width:85%;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+#procedure_horacreacion_4i,#procedure_horacreacion_5i{
+    width:25%;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+#procedure_causaexterna,#procedure_finalidad{
+    width:50%;
+    height: 30px;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
 .nav.navbar.navbar-default{
   margin-bottom: 0px !important;
 }

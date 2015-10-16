@@ -1,8 +1,4 @@
-class Employee < ActiveRecord::Base
-  belongs_to :position
-  belongs_to :user
-  # Confirmamos el email y validamos que no sean vacios con presence
-  # mostramos el mensaje de error con message
+class Patient < ActiveRecord::Base
   validates :email , presence: { message: " es requerido"}  , confirmation: true
   validates :nombre , presence: { message: " es requerido"} , confirmation: true
   validates :apellido , presence: { message: " es requerido"} , confirmation: true
@@ -25,6 +21,5 @@ class Employee < ActiveRecord::Base
 
   # Validamos que el email sea unico
   validates :email, uniqueness: {case_sensitive: false ,message: "ya esta registrado"}
-  validates :codCOP, uniqueness: {case_sensitive: false ,message: "ya esta registrado"}
   validates :dni, uniqueness: {case_sensitive: false ,message: "ya esta registrado"}
 end

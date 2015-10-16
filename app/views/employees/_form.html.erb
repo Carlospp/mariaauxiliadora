@@ -16,15 +16,15 @@
 
   <div class="field form-group">
     <%= f.label :nombre %><br>
-    <%= f.text_field :nombre ,:class => 'form-control' %>
+    <%= f.text_field :nombre ,:class => 'form-control' ,:placeholder=>'Ingresar nombre'%>
   </div>
   <div class="field form-group">
     <%= f.label :apellido %><br>
-    <%= f.text_field :apellido ,:class => 'form-control' %>
+    <%= f.text_field :apellido ,:class => 'form-control',:placeholder=>'Ingresar apellido' %>
   </div>
   <div class="field form-group">
     <%= f.label :dni %><br>
-    <%= f.text_field :dni ,:class => 'form-control' %>
+    <%= f.text_field :dni ,:class => 'form-control' ,:placeholder=>'Ingresar dni'%>
   </div>
   <div class="field form-group">
     <%= f.label :fecnac %><br>
@@ -70,11 +70,11 @@
   </div>
   <div class="field form-group">
     <%= f.label :position_id %><br>
-    <%= f.text_field :position_id ,:class => 'form-control' %>
+    <%= f.collection_select :position_id ,Position.all,:id,:sueldo,:class => 'form-control' %>
   </div>
   <div class="field form-group">
     <%= f.label :user_id %><br>
-    <%= f.text_field :user_id ,:class => 'form-control' %>
+    <%= f.collection_select :user_id ,User.all,:id,:email,:class => 'form-control' , :include_blank => false %>
   </div>
   <div class="actions">
     <%= f.submit "Crear Empleado" ,:class => 'btn btn-primary'%>
