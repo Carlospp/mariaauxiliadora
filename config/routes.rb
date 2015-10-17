@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'intranet' => 'internal#intranet', as: :intranet
+
   resources :procedures
   resources :patients
   resources :employees

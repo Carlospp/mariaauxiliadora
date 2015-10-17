@@ -72,8 +72,10 @@
   <strong>User:</strong>
   <%= @employee.user %>
 </p>
+<% if can? :update, @patients %>
+    <%= link_to 'Editar', edit_employee_path(@employee) %> |
+  <% end %>
 
-<%= link_to 'Editar', edit_employee_path(@employee) %> |
 <%= link_to 'Atras', employees_path %>
 </div>
 </div>

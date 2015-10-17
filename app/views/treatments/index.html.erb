@@ -26,8 +26,13 @@
         <td><%= treatment.descripcion %></td>
         <td><%= treatment.costo %></td>
         <td><%= link_to 'Mostrar', treatment %></td>
-        <td><%= link_to 'Editar', edit_treatment_path(treatment) %></td>
-        <td><%= link_to 'Eliminar', treatment, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        <% if can? :edit, @treatment %>
+        <td>
+          <%= link_to 'Editar', edit_treatment_path(treatment) %></td><% end %>
+        <% if can? :destroy, @treatment %>
+        <td>
+          <%= link_to 'Eliminar', treatment, method: :delete, data: { confirm: 'Esta seguro?' } %>
+        </td><% end %>
       </tr>
     <% end %>
   </tbody>
@@ -36,6 +41,7 @@
 </div>
 
 <br>
-
+<% if can? :create, @treatment %>
 <%= link_to 'Nuevo Tratamiento', new_treatment_path %>
+<% end %>
 </div>

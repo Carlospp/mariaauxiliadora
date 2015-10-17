@@ -20,8 +20,10 @@
   <strong>Sueldo:</strong>
   <%= @position.sueldo %>
 </p>
+<% if can? :update, @patients %>
+    <%= link_to 'Editar', edit_position_path(@position) %> |
+  <% end %>
 
-<%= link_to 'Editar', edit_position_path(@position) %> |
 <%= link_to 'Atras', positions_path %>
 </div>
 </div>

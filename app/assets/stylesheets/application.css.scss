@@ -22,6 +22,10 @@ $celeste: #0296d7;
 $break-small: 360px;
 $break-medium: 767px;
 $break-large: 1200px;
+#nombreBienvenida{
+    color:#FFFFFF;
+    font-size: 1.3em;
+}
 #cabecera_index{
     width: 100%;
     height: 200px;
@@ -35,6 +39,12 @@ $break-large: 1200px;
     background-image: url(image-path('cabecera_movil.jpg'));
     }
 
+}
+#imagenintranet{
+    width: 100% !important;
+    height: 600px;
+    background-image: url(image-path('dental.jpg'));
+    background-size: 100% 600px;
 }
 .alert {
     padding: 1px 0px 1px 20px;

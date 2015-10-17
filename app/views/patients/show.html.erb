@@ -57,8 +57,9 @@
   <strong>Estado:</strong>
   <%= @patient.estado %>
 </p>
-
-<%= link_to 'Editar', edit_patient_path(@patient) %> |
+  <% if can? :update, @patients %>
+      <%= link_to 'Editar', edit_patient_path(@patient) %> |
+  <% end %>
 <%= link_to 'Atras', patients_path %>
 </div>
 </div>

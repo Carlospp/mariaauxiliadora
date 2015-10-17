@@ -17,8 +17,9 @@
         <strong>Costo:</strong>
         <%= @treatment.costo %>
       </p>
-
-<%= link_to 'Editar', edit_treatment_path(@treatment) %> |
+<% if can? :update, @patients %>
+    <%= link_to 'Editar', edit_treatment_path(@treatment) %> |
+  <% end %>
 <%= link_to 'Atras', treatments_path %>
 </div>
 </div>

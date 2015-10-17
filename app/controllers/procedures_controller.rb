@@ -2,7 +2,11 @@ class ProceduresController < ApplicationController
   layout 'intranet'
   before_action :set_procedure, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  load_and_authorize_resource
 
+  rescue_from CanCan::AccessDenied do |exception|
+   redirect_to intranet_url, :alert => exception.message
+  end
   # GET /procedures
   # GET /procedures.json
   def index

@@ -520,7 +520,9 @@
   
   
   <div class="actions">
+    <% if can? :create, @procedure %>
     <%= f.submit "Crear Encuentro Odontologico" ,:class => 'btn btn-primary'%>
+    <% end %>
   </div>
 <% end %>
 <br>

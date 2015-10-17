@@ -34,14 +34,20 @@
         <td><%= mail_to patient.email %></td>
         <td><%= patient.fecingreso %></td>
         <td><%= link_to 'Mostrar', patient %></td>
-        <td><%= link_to 'Editar', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Eliminar', patient, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        <% if can? :update, patient %>
+          <td>
+            <%= link_to 'Editar', edit_patient_path(patient) %>
+          </td><% end %>
+          <% if can? :destroy, patient %>
+          <td>
+            <%= link_to 'Eliminar', patient, method: :delete, data: { confirm: 'Esta seguro?' } %>
+          </td><% end %>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 </div>
   </div>
-
 <%= link_to 'Nuevo Paciente', new_patient_path %>
 </div>

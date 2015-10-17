@@ -34,6 +34,7 @@
                     </ul>
                     <!-- /.dropdown-messages -->
                 </li>
+                <% if can? :create, @employee %>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user-md fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -62,6 +63,7 @@
                     </ul>
                     <!-- /.dropdown-messages -->
                 </li>
+                <% end %>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -95,11 +97,13 @@
                     <!-- /.dropdown-messages -->
                 </li>
                 <!-- /.dropdown -->
+                
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
+                        
                         <li>
                             <a href="/procedures/new">
                                 <div>
@@ -111,14 +115,16 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a class="text-center" href="/procedures/">
+                            <a href="/procedures/">
                                 <strong>Ver todas las Historias Clinicas</strong>
                             </a>
                         </li>
                     </ul>
                     <!-- /.dropdown-tasks -->
                 </li>
+                
                 <!-- /.dropdown -->
+                
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="glyphicon glyphicon-sd-video"></i>  <i class="fa fa-caret-down"></i>
@@ -131,6 +137,7 @@
                                 </div>
                             </a>
                         </li>
+                        <% if can? :create, @treatment %>
                         <li class="divider"></li>
                         <li>
                             <a href="/treatments/new">
@@ -139,6 +146,8 @@
                                 </div>
                             </a>
                         </li>
+                        <% end %>
+                        <% if can? :create, @treatment %>
                         <li class="divider"></li>
                         <li>
                             <a href="/positions/new">
@@ -150,6 +159,8 @@
                                 </div>
                             </a>
                         </li>
+                        <% end %>
+                        <% if can? :create, @position %>
                         <li class="divider"></li>
                         <li>
                             <a href="/positions/">
@@ -160,9 +171,11 @@
                                 </div>
                             </a>
                         </li>
+                        <% end %>
                     </ul>
                     <!-- /.dropdown-alerts -->
                 </li>
+                
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
