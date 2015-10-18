@@ -20,12 +20,16 @@ class Ability
             procedure.try(:user) == user
             end
       
-      elsif user.rol =='secretaria'
+        elsif user.rol =='secretaria'
           alias_action :create, :read,:update, :to => :cru
           can :cru , Patient
           can :manage,Patient
           can :read,Treatment
           can :read,Procedure
+        
+        elsif user.rol =='usuario'
+          alias_action :read, :all
+
         end 
     #  can :read, :all
     #  if 
