@@ -135,7 +135,6 @@
                                 </div>
                             </a>
                         </li>
-                        <% if can? :create, @treatment %>
                         <li class="divider"></li>
                         <li>
                             <a href="/treatments/new">
@@ -145,7 +144,6 @@
                             </a>
                         </li>
                         <% end %>
-                        <% if can? :create, @treatment %>
                         <li class="divider"></li>
                         <li>
                             <a href="/positions/new">
@@ -157,8 +155,6 @@
                                 </div>
                             </a>
                         </li>
-                        <% end %>
-                        <% if can? :create, @position %>
                         <li class="divider"></li>
                         <li>
                             <a href="/positions/">
