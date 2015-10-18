@@ -1,6 +1,6 @@
 class Employee < ActiveRecord::Base
   belongs_to :position
-  belongs_to :user
+  belongs_to :user 
   # Confirmamos el email y validamos que no sean vacios con presence
   # mostramos el mensaje de error con message
   validates :email , presence: { message: " es requerido"}  , confirmation: true
