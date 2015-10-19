@@ -27,10 +27,10 @@ $break-large: 1200px;
     font-size: 1.3em;
 }
 #cabecera_index{
-    width: 100%;
-    height: 200px;
     background-image: url(image-path('cabecera.jpg'));
     background-size: 100% 200px;
+    height: 200px;
+    width: 100%;
     
     @media screen and (max-width: $break-medium) {
     background-image: url(image-path('cabecera360.jpg'));
@@ -40,17 +40,25 @@ $break-large: 1200px;
     }
 
 }
+#enlace_login{
+    padding-right: 3%;
+    padding-top: 2%;
+    float: right;
+}
 #imagenintranet{
-    width: 100% !important;
-    height: 600px;
     background-image: url(image-path('dental.jpg'));
     background-size: 100% 600px;
+    height: 600px;
+    width: 100% !important;
 }
 .alert {
     padding: 1px 0px 1px 20px;
     margin-bottom: 0px;
     border: 1px solid transparent;
     border-radius: 0px;
+}
+.icon-bar{
+    color:#fff !important;
 }
 select.date,#employee_sexo,#employee_estado,#procedure_grupo,#patient_fecnac_1i,
         #patient_fecnac_2i,#patient_fecnac_3i{
@@ -124,7 +132,14 @@ footer,.navbar-default{
     background-color: #fff;
   }
 }
-
+.lista_tratamientos_serv{
+    @media screen and (max-width: $break-small) {
+    display: none;
+  }
+    @media screen and (max-width: $break-medium) {
+    display: none;
+    }
+}
 footer a,.navbar-default a{
   color: #fff !important;
 }
@@ -144,7 +159,7 @@ footer a,.navbar-default a{
   
 }
 footer{
-  @media screen and (max-width: $break-small) {
+  @media screen and (max-width: $break-large) {
     #footer_serv,#footer_no{
       display: none;
     }

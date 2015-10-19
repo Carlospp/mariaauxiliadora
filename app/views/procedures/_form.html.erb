@@ -30,13 +30,7 @@
     <%= f.label :paciente_id %><br>
     <%= f.collection_select :employee_id ,Patient.all,:id,:nombre,:class => 'form-control' , :include_blank => false %>
   </div>
-  <div class="field form-group col-md-4">
-    <% employee_id={'HERBERT MARTINEZ'=> '1',
-                    'ROSA MUÑOZ'=> '2',
-                    'ANDRE CARRILLO'=> '3',} %>
-    <%= f.label :odontologo_id %><br>
-    <%= f.select :employee_id,employee_id,:class => 'form-control' %>
-  </div>
+  
   <div class="field form-group col-md-4">
     <%= f.label :odontologo_id %><br>
     <%= f.collection_select :employee_id ,Employee.all,:id,:apellido,:class => 'form-control' , :include_blank => false %>
@@ -181,7 +175,7 @@
                   <div class="col-md-4">
                     <div class="field form-group">
                       <%= f.label :tratamiento %>
-                      <label for="tratamiento">si</label>
+                      <label for="tratamiento" class="text-align-right">si</label>
                       <%= f.radio_button :tratamiento,"si",checked: true %>
                       <label for="tratamiento">no</label>
                       <%= f.radio_button :tratamiento,"no" %>

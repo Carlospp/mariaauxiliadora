@@ -5,9 +5,9 @@
     <div class="col-md-8">
       <h2 class="text-left text-primary">
         Endodoncia
-      </h2><img alt="Bootstrap Image Preview" src="http://lorempixel.com/840/300/" />
+      </h2><img alt="Bootstrap Image Preview" src="http://lorempixel.com/840/300/" class="img-responsive" alt="Responsive image"/>
       <blockquote>
-        <p>
+        <p class="text-justify">
           La caries es una enfermedad infecciosa que se caracteriza por la destrucción de los tejidos duros del diente como consecuencia de una desmineralización provocada por la placa bacteriana.
         </p>
       </blockquote>
@@ -34,7 +34,7 @@
       <h2 class="text-left text-primary">
         ¿Qué es la endodoncia?
       </h2>
-      <p>
+      <p class="text-justify">
         La endodoncia es un tratamiento que consiste en eliminar el tejido pulpar de la pieza dental y se sustituye por un relleno inorgánico que garantiza la hermeticidad interna de la pieza y devuelve su función masticatoria y estética.
       </p>
       <h3>
@@ -75,31 +75,31 @@
       </ul>
       <br><br>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 lista_tratamientos_serv">
 
     <h3 class="text-left text-primary">Nuestros tratamientos</h3>
 
     <ul>
        <li >
-        <a href="../servicios/rehabilitacion">Rehabilitacion</a>
+        <%= link_to 'Rehabilitacion', rehabilitacion_path%>
       </li>
       <li >
-        <a href="../servicios/ortodoncia">ortodoncia</a>
+        <%= link_to 'Ortodoncia', ortodoncia_path%>
       </li>
       <li >
-        <a href="../servicios/endodoncia">endodoncia</a>
+        <%= link_to 'Endodoncia', endodoncia_path%>
       </li>
       <li >
-        <a href="../servicios/estetica">Estetica</a>
+        <%= link_to 'Estetica', estetica_path%>
       </li>
       <li >
-        <a href="../servicios/cirugia">cirugia</a>
+        <%= link_to 'Cirugia', cirugia_path%>
       </li>
       <li >
-        <a href="../servicios/periododoncia">periododoncia</a>
+        <%= link_to 'Periododoncia', periododoncia_path%>
       </li>
       <li >
-        <a href="../servicios/implantes">implantes</a>
+        <%= link_to 'Implantes', implantes_path%>
       </li>
     </ul>
 
