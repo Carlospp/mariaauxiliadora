@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Nombre</Data></Cell>
+        <Cell><Data ss:Type="String">Apellido</Data></Cell>
+        <Cell><Data ss:Type="String">DNI</Data></Cell>
+        <Cell><Data ss:Type="String">Sexo</Data></Cell>
+        <Cell><Data ss:Type="String">Fecha Nacimiento</Data></Cell>
+        <Cell><Data ss:Type="String">Telefono</Data></Cell>
+        <Cell><Data ss:Type="String">Celular</Data></Cell>
+        <Cell><Data ss:Type="String">Dirección</Data></Cell>
+        <Cell><Data ss:Type="String">E-Mail</Data></Cell>
+        <Cell><Data ss:Type="String">Fecha Ingreso</Data></Cell>
+        <Cell><Data ss:Type="String">Estado</Data></Cell>
+      </Row>
+    <% @patients.each do |patient| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= patient.nombre %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= patient.apellido %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= patient.dni %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= patient.sexo %></Data></Cell>
+        <Cell><Data ss:Type="Date"><%= patient.fecnac %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= patient.telefono %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= patient.celular %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= patient.direccion %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= patient.email %></Data></Cell>
+        <Cell><Data ss:Type="Date"><%= patient.fecingreso %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= patient.estado %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

@@ -49,5 +49,7 @@
 </table>
 </div>
   </div>
-<%= link_to 'Nuevo Paciente', new_patient_path %>
+<%= link_to 'Nuevo Paciente', new_patient_path ,:class =>'btn btn-primary'%>
+<%= link_to "Exportar a Excel", patients_path(format: "xls"),:class =>'btn btn-success' %>
+<%= link_to "Exportar a CSV", patients_path(format: "csv"),:class =>'btn btn-success' %>
 </div>

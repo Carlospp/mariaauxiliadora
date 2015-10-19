@@ -1,11 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h2 class="col-md-offset-5">Listado de tratamientos</h2>
-<p>
-  Descargar:
-  <%= link_to "CSV", treatments_path(format: "csv") %> |
-  <%= link_to "Excel", treatments_path(format: "xls") %>
-</p>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
@@ -37,11 +33,16 @@
     <% end %>
   </tbody>
 </table>
+
+<%= will_paginate @treatments ,:class => 'pagination'%> 
 </div>
 </div>
 
 <br>
 <% if can? :create, @treatment %>
-<%= link_to 'Nuevo Tratamiento', new_treatment_path %>
+<%= link_to 'Nuevo Tratamiento', new_treatment_path ,:class =>'btn btn-primary'%>
+
+  <%= link_to "Exportar a Excel", treatments_path(format: "xls"),:class =>'btn btn-success' %>
+  <%= link_to "Exportar a CSV", treatments_path(format: "csv"),:class =>'btn btn-success' %>
 <% end %>
 </div>

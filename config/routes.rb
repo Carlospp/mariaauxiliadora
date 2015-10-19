@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
+  root 'pages#index'
 
-  get 'intranet' => 'internal#intranet', as: :intranet
 
   resources :procedures
   resources :patients
   resources :employees
   devise_for :views
   devise_for :users
+  resources :positions
+  resources :treatments
+  
+  get 'intranet' => 'internal#intranet', as: :intranet
+  
   get 'servicios/estetica'=> 'services#aesthetic', as: :estetica
 
   get 'servicios/endodoncia'=> 'services#endodontic', as: :endodoncia
@@ -21,16 +26,13 @@ Rails.application.routes.draw do
 
   get 'servicios/cirugia'=> 'services#surgery', as: :cirugia
 
-  root 'pages#index'
 
   get 'contactenos' => 'pages#contact', as: :contactenos
   get 'nosotros' => 'pages#about', as: :nosotros
   get 'servicios' => 'pages#services', as: :servicios
 
-
-  resources :positions
-  resources :treatments
   # The priority is based upon order of creation: first created -> highest priority.
+
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

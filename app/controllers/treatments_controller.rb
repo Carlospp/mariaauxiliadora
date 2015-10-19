@@ -7,10 +7,15 @@ class TreatmentsController < ApplicationController
   rescue_from CanCan::AccessDenied do |exception|
    redirect_to intranet_url, :alert => exception.message
   end
+
+  def note_params
+  params.require(:treatment).permit(:what, :ever)
+end
   # GET /treatments
   # GET /treatments.json
   def index
-    @treatments = Treatment.all
+    #@treatments = Treatment.all
+    @treatments = Treatment.paginate(:page => params[:page], :per_page => 5)
     respond_to do |format|
       format.html
       format.csv { send_data @dentists.to_csv }

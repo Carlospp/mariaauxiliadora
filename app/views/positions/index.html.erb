@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<% if can? :create, @position %>
-  <%= link_to 'Editar', new_position_path(position) %>
-<% end %>
-
 <h2 class="col-md-offset-5">Listado de Cargos</h2>
 <div class="container-fluid">
   <div class="row">
@@ -35,5 +31,7 @@
 </div>
 <br>
 
-<%= link_to 'Nuevo Cargo', new_position_path %>
+<%= link_to 'Nuevo Cargo', new_position_path  ,:class =>'btn btn-primary'%>
+<%= link_to "Exportar a Excel", positions_path(format: "xls"),:class =>'btn btn-success' %>
+<%= link_to "Exportar a CSV", positions_path(format: "csv"),:class =>'btn btn-success' %>
 </div>
