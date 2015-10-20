@@ -1,5 +1,10 @@
 <%= provide(:index,"active") %>
 <%= provide(:title,"Inicio") %>
+<div class="sociales">
+<a href="http://www.facebook.com/CDMariaAuxiliadora?fref=ts" target="_blank"><img src="<%= asset_path("icon/Facebook.png") %>" /></a>
+<a href="#" target="_blank"><img src="<%= asset_path("icon/Twitter.png") %>" /></a>
+  <a href="#" target="_blank"><img  src="<%= asset_path("icon/youtube.png") %>" /></a>
+</div>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
@@ -17,52 +22,81 @@
       <h3 class="text-center text-info">
         Ponte en buenas manos, confía en nuestros odontólogos y equipo<br> médico para dar solución a tus problemas dentales
       </h3>
-      <%= render 'shared/formcita' %><br>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7 col-md-offset-5 col-xs-6 col-xs-offset-2">
+             <button type="button" class="btn btn-primary" id="modal-formCita" href="#modal-cita" data-toggle="modal">Solicita tu cita ahora!!!</button>
+      
+              <div class="modal fade" id="modal-cita" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                       
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                      </button>
+                      <h4 class="modal-title" id="myModalLabel">
+                        Solicitud de cita Odontologica
+                      </h4>
+                    </div>
+                    <div class="modal-body">
+                    <%= render 'shared/formcita' %>
+                    </div>
+                
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
       <div class="row">
         <div class="col-md-4">
           <div class="thumbnail">
-            <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg" />
+            <img alt="mariaux" src="<%= asset_path("mariaaux.jpg") %>" class="img-responsive" alt="Responsive image"/>
             <div class="caption">
-              <h3>
+              <h3 class="text-primary" >
                 Nuestra clínica
               </h3>
               <p>
-                Todos nuestros centros disponen de tecnología de vanguardia para poder realizar cualquier especialidad. Las instalaciones están adaptados para personas con movilidad reducida.
+                Nuestro centro odontologico dispone de tecnología de vanguardia para poder realizar cualquier especialidad. Las instalaciones están adaptados para personas con movilidad reducida.
               </p>
               <p>
-                <a class="btn" href="nosotros">Leer mas...</a>
+                <%= link_to 'Leer mas...', nosotros_path ,:class => 'btn'%>
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="thumbnail">
-            <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
+            <img alt="mariaux" src="<%= asset_path("mariaaux.jpg") %>" class="img-responsive" alt="Responsive image"/>
             <div class="caption">
-              <h3>
+              <h3 class="text-primary">
                 Todos los tratamientos
               </h3>
               <p>
-                Con 4 centros especializados en todo tipo de tratamientos dentales, nuestro equipo de profesionales está especializado en ofrecer la solución idónea a tus problemas dentales.
+                Nuestro centro odontologico cuenta con todo tipo de tratamientos dentales, nuestro equipo de profesionales está especializado en ofrecer la solución idónea a tus problemas dentales.
               </p>
               <p>
-                 <a class="btn" href="servicios">Leer mas...</a>
+                 <%= link_to 'Leer mas...', rehabilitacion_path ,:class => 'btn'%>
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="thumbnail">
-            <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
+            <img alt="mariaux" src="<%= asset_path("mariaaux.jpg") %>" class="img-responsive" alt="Responsive image"/>
             <div class="caption">
-              <h3>
+              <h3 class="text-primary">
                  Dudas y preguntas
               </h3>
               <p>
-                Encuentra las soluciones a los problemas dentales que tanto te preocupan. Consulta con nuestros especialistas para realizarte tu tratamiento dental y recupera tu sonrisa.
+                Encuentra las soluciones a los problemas dentales que tanto te preocupan. Consulta con nuestros especialistas para realizarte tu tratamiento dental y recupera tu sonrisa.<br>
               </p>
               <p>
-                <a class="btn" href="servicios">Leer mas...</a>
+                <%= link_to 'Leer mas...', contactenos_path ,:class => 'btn'%>
               </p>
             </div>
           </div>
@@ -72,3 +106,4 @@
   </div>
 </div>
 
+  

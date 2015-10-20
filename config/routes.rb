@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'servicios/ortodoncia'=> 'services#orthodontic', as: :ortodoncia
 
-  get 'servicios/periododoncia'=> 'services#periodontic', as: :periododoncia
+  get 'servicios/periodoncia'=> 'services#periodontic', as: :periodoncia
 
   get 'servicios/rehabilitacion'=> 'services#rehabilitation', as: :rehabilitacion
 

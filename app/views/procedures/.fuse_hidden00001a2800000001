@@ -1,0 +1,523 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-md-offset-0">
+<%= form_for(@procedure) do |f| %>
+  <% if @procedure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@procedure.errors.count, "error") %> evitaron que se pueda crear correctamente:</h2>
+
+      <ul>
+      <% @procedure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group col-md-4">
+    <%= f.label :fecha_alta %><br>
+    <%= f.text_field :feccreacion,:class => 'form-control',:disabled=>true , :value=>DateTime.now.strftime('%d/%m/%Y')  %>
+  </div>
+  <div class="field form-group col-md-4">
+    <%= f.label :hora_creacion %><br>
+    <%= f.text_field :horacreacion ,:class => 'form-control',:disabled=>true , :value=>DateTime.now.strftime('%I:%M:%S') %>
+  </div>
+  <div class="field form-group col-md-4">
+    <%= f.label :cita %><br>
+    <%= f.text_field :appointment,:class => 'form-control',:disabled=>true , :value=>Time.new %>
+  </div>
+  <div class="field form-group col-md-8">
+    <%= f.label :paciente_id %><br>
+    <%= f.collection_select :employee_id ,Patient.all,:id,:nombre,:class => 'form-control' , :include_blank => false %>
+  </div>
+  
+  <div class="field form-group col-md-4">
+    <%= f.label :odontologo_id %><br>
+    <%= f.collection_select :employee_id ,Employee.all,:id,:apellido,:class => 'form-control' , :include_blank => false %>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tabbable" id="tabs-757758">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#historia" data-toggle="tab">HISTORIAL</a>
+          </li>
+          <li >
+            <a href="#anamnesis" data-toggle="tab">ANAMNESIS</a>
+          </li>
+          <li >
+            <a href="#diagnosticos" data-toggle="tab">DIAGNOSTICOS</a>
+          </li>
+          <li >
+            <a href="#odontograma" data-toggle="tab">ODONTOGRAMA</a>
+          </li>
+          <li >
+            <a href="#tratamientos" data-toggle="tab">TRATAMIENTO</a>
+          </li>
+          <li >
+            <a href="#imagenes" data-toggle="tab">IMAGENES</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="historia">
+            
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <table class="table table-bordered table-condensed">
+                      <thead>
+                        <tr>
+                          <th>
+                            #
+                          </th>
+                          <th>
+                            Product
+                          </th>
+                          <th>
+                            Payment Taken
+                          </th>
+                          <th>
+                            Status
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                        </tr>
+                        <tr class="active">
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Approved
+                          </td>
+                        </tr>
+                        <tr class="success">
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            TB - Monthly
+                          </td>
+                          <td>
+                            02/04/2012
+                          </td>
+                          <td>
+                            Declined
+                          </td>
+                        </tr>
+                        <tr class="warning">
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            TB - Monthly
+                          </td>
+                          <td>
+                            03/04/2012
+                          </td>
+                          <td>
+                            Pending
+                          </td>
+                        </tr>
+                        <tr class="danger">
+                          <td>
+                            4
+                          </td>
+                          <td>
+                            TB - Monthly
+                          </td>
+                          <td>
+                            04/04/2012
+                          </td>
+                          <td>
+                            Call in to confirm
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+          <div class="tab-pane" id="anamnesis">
+              <div class="field form-group" ><br>
+                <% grupo={'5 a 14 años'=> '5 a 14 años',
+                            'Embarazadas'=> 'Embarazadas',
+                            'otros'=> 'otros',} %>
+                  <%= f.label :grupo %>
+                <%= f.select :grupo,grupo ,:class => 'form-control' %> 
+              </div>
+              <H3 class="bg-primary">AMAMNESIS</H3> 
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="field form-group">
+                      <%= f.label :tratamiento %>
+                      <label for="tratamiento" class="text-align-right">si</label>
+                      <%= f.radio_button :tratamiento,"si",checked: true %>
+                      <label for="tratamiento">no</label>
+                      <%= f.radio_button :tratamiento,"no" %>
+                    </div>
+                    <div class="field form-group" >
+                      <%= f.label :medicamentos %>
+                      <label for="medicamentos">si</label>
+                      <%= f.radio_button :medicamentos,"si",checked: true %>
+                      <label for="medicamentos">no</label>
+                      <%= f.radio_button :medicamentos,"no" %>
+                    </div>
+                    <div class="field form-group" >
+                      <%= f.label :alergias %>
+                      <label for="alergias">si</label>
+                      <%= f.radio_button :alergias,"si",checked: true %>
+                      <label for="alergias">no</label>
+                      <%= f.radio_button :alergias,"no" %>
+                    </div>
+                    <div class="field form-group" >
+                      <%= f.label :hemorragias %>
+                      <label for="hemorragias">si</label>
+                      <%= f.radio_button :hemorragias,"si",checked: true %>
+                      <label for="hemorragias">no</label>
+                      <%= f.radio_button :hemorragias,"no" %>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="field form-group" >
+                      <%= f.label :irradiaciones %>
+                      <label for="irradiaciones">si</label>
+                      <%= f.radio_button :irradiaciones,"si",checked: true %>
+                      <label for="irradiaciones">no</label>
+                      <%= f.radio_button :irradiaciones,"no" %>
+                    </div>
+                    <div class="field form-group" >
+                      <%= f.label :sinusitis %><br>
+                      <label for="sinusitis">si</label>
+                      <%= f.radio_button :sinusitis,"si",checked: true %>
+                      <label for="sinusitis">no</label>
+                      <%= f.radio_button :sinusitis,"no" %>
+                    </div>
+                    <div class="field form-group" >
+                      <%= f.label :respiratorias %><br>
+                      <label for="respiratorias">si</label>
+                      <%= f.radio_button :respiratorias,"si",checked: true %>
+                      <label for="respiratorias">no</label>
+                      <%= f.radio_button :respiratorias,"no" %>
+                    </div>
+                    <div class="field form-group" >
+                      <%= f.label :cardiopatias %><br>
+                      <label for="cardiopatias">si</label>
+                      <%= f.radio_button :cardiopatias,"si",checked: true %>
+                      <label for="cardiopatias">no</label>
+                      <%= f.radio_button :cardiopatias,"no" %>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="field form-group" >
+                      <%= f.label :diabetes %><br>
+                      <label for="diabetes">si</label>
+                      <%= f.radio_button :diabetes,"si",checked: true %>
+                      <label for="diabetes">no</label>
+                      <%= f.radio_button :diabetes,"no" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :fiebre %><br>
+                      <label for="fiebre">si</label>
+                      <%= f.radio_button :fiebre,"si",checked: true %>
+                      <label for="fiebre">no</label>
+                      <%= f.radio_button :fiebre,"no" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :hepatitis %><br>
+                      <label for="hepatitis">si</label>
+                      <%= f.radio_button :hepatitis,"si",checked: true %>
+                      <label for="hepatitis">no</label>
+                      <%= f.radio_button :hepatitis,"no" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :hipertension %><br>
+                      <label for="hipertension">si</label>
+                      <%= f.radio_button :hipertension,"si",checked: true %>
+                      <label for="hipertension">no</label>
+                      <%= f.radio_button :hipertension,"no" %>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              
+              <div class="field form-group">
+                <%= f.label :otras_enfermedades %><br>
+                <%= f.text_field :otrasenfermedades,:class => 'form-control' %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :cepillado %><br>
+                <label for="cepillado">si</label>
+                <%= f.radio_button :cepillado,"si",checked: true %>
+                <label for="cepillado">no</label>
+                <%= f.radio_button :cepillado,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :hilo %><br>
+                <label for="hilo">si</label>
+                <%= f.radio_button :hilo,"si",checked: true %>
+                <label for="hilo">no</label>
+                <%= f.radio_button :hilo,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :otros %><br>
+                <%= f.text_field :otros ,:class => 'form-control'%>
+              </div>
+              <div class="field form-group">
+                <%= f.label :observaciones %><br>
+                <%= f.text_area :obsanamnesis ,:class => 'form-control'%>
+              </div>
+              <H3 class="bg-primary">EXAMEN FISICO ESTOMATOLOGICO</H3> <!-- **************************** -->
+              <div class="field form-group col-md-3">
+                <%= f.label :temperatura %><br>
+                <%= f.text_field :temperatura,:class => 'form-control' %>
+              </div>
+              <div class="field form-group col-md-3">
+                <%= f.label :pulso %><br>
+                <%= f.text_field :pulso,:class => 'form-control' %>
+              </div>
+              <div class="field form-group col-md-3">
+                <%= f.label :tension %><br>
+                <%= f.text_field :tension,:class => 'form-control' %>
+              </div>
+              <div class="field form-group col-md-3">
+                <%= f.label :respiracion %><br>
+                <%= f.text_field :respiracion,:class => 'form-control' %>
+              </div>
+              
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="field form-group">
+                      <%= f.label :mandibula %><br>
+                      <label for="mandibula">normal</label>
+                      <%= f.radio_button :mandibula,"normal",checked: true %>
+                      <label for="mandibula">anormal</label>
+                      <%= f.radio_button :mandibula,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :labios %><br>
+                      <label for="labios">normal</label>
+                      <%= f.radio_button :labios,"normal",checked: true %>
+                      <label for="labios">anormal</label>
+                      <%= f.radio_button :labios,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :lengua %><br>
+                      <label for="lengua">normal</label>
+                      <%= f.radio_button :lengua,"normal",checked: true %>
+                      <label for="lengua">anormal</label>
+                      <%= f.radio_button :lengua,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :paladar %><br>
+                      <label for="paladar">normal</label>
+                      <%= f.radio_button :paladar,"normal",checked: true %>
+                      <label for="paladar">anormal</label>
+                      <%= f.radio_button :paladar,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :boca %><br>
+                      <label for="boca">normal</label>
+                      <%= f.radio_button :boca,"normal",checked: true %>
+                      <label for="boca">anormal</label>
+                      <%= f.radio_button :boca,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :carrillos %><br>
+                      <label for="carrillos">normal</label>
+                      <%= f.radio_button :carrillos,"normal",checked: true %>
+                      <label for="carrillos">anormal</label>
+                      <%= f.radio_button :carrillos,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :glandulas %><br>
+                      <label for="glandulas">normal</label>
+                      <%= f.radio_button :glandulas,"normal",checked: true %>
+                      <label for="glandulas">anormal</label>
+                      <%= f.radio_button :glandulas,"anormal" %>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="field form-group">
+                      <%= f.label :maxilares %><br>
+                      <label for="maxilares">normal</label>
+                      <%= f.radio_button :maxilares,"normal",checked: true %>
+                      <label for="maxilares">anormal</label>
+                      <%= f.radio_button :maxilares,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :senosmaxilares %><br>
+                      <label for="senosmaxilares">normal</label>
+                      <%= f.radio_button :senosmaxilares,"normal",checked: true %>
+                      <label for="senosmaxilares">anormal</label>
+                      <%= f.radio_button :senosmaxilares,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :masticadores %><br>
+                      <label for="masticadores">normal</label>
+                      <%= f.radio_button :masticadores,"normal",checked: true %>
+                      <label for="masticadores">anormal</label>
+                      <%= f.radio_button :masticadores,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :nervioso %><br>
+                      <label for="nervioso">normal</label>
+                      <%= f.radio_button :nervioso,"normal",checked: true %>
+                      <label for="nervioso">anormal</label>
+                      <%= f.radio_button :nervioso,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :vascular %><br>
+                      <label for="vascular">normal</label>
+                      <%= f.radio_button :vascular,"normal",checked: true %>
+                      <label for="vascular">anormal</label>
+                      <%= f.radio_button :vascular,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :linfatico %><br>
+                      <label for="linfatico">normal</label>
+                      <%= f.radio_button :linfatico,"normal",checked: true %>
+                      <label for="linfatico">anormal</label>
+                      <%= f.radio_button :linfatico,"anormal" %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :oclusion %><br>
+                      <label for="oclusion">normal</label>
+                      <%= f.radio_button :oclusion,"normal",checked: true %>
+                      <label for="oclusion">anormal</label>
+                      <%= f.radio_button :oclusion,"anormal" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="field form-group">
+                <%= f.label :observaciones %><br>
+                <%= f.text_area :obsfisico,:class => 'form-control' %>
+              </div>
+          </div>
+
+          <div class="tab-pane" id="diagnosticos">
+              <H3 class="bg-primary">EXAMEN DENTAL</H3>
+              <div class="field form-group">
+                <%= f.label :abrasion %><br>
+                <label for="abrasion">si</label>
+                <%= f.radio_button :abrasion,"si",checked: true %>
+                <label for="abrasion">no</label>
+                <%= f.radio_button :abrasion,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :placacalificada %><br>
+                <label for="placacalificada">si</label>
+                <%= f.radio_button :placacalificada,"si",checked: true %>
+                <label for="placacalificada">no</label>
+                <%= f.radio_button :placacalificada,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :pulpar %><br>
+                <label for="pulpar">si</label>
+                <%= f.radio_button :pulpar,"si",checked: true %>
+                <label for="pulpar">no</label>
+                <%= f.radio_button :pulpar,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :placablanda %><br>
+                <label for="placablanda">si</label>
+                <%= f.radio_button :placablanda,"si",checked: true %>
+                <label for="placablanda">no</label>
+                <%= f.radio_button :placablanda,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :fluorosis %><br>
+                <label for="fluorosis">si</label>
+                <%= f.radio_button :fluorosis,"si",checked: true %>
+                <label for="fluorosis">no</label>
+                <%= f.radio_button :fluorosis,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :manchas %><br>
+                <label for="manchas">si</label>
+                <%= f.radio_button :manchas,"si",checked: true %>
+                <label for="manchas">no</label>
+                <%= f.radio_button :manchas,"no" %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :observaciones %><br>
+                <%= f.text_field :obsdental,:class => 'form-control' %>
+              </div>
+              <H3 class="bg-primary">DIAGNOSTICO Y PRONOSTICO</H3>
+              <div class="field form-group col-md-6">
+              <% causaexterna={'Enfermedad General'=> 'Enfermedad General',
+                            'Lesión por agresión'=> 'Lesión por agresión',
+                            'otros'=> 'otros',} %>
+                <%= f.label :causa_externa %><br>
+                <%= f.select :causaexterna,causaexterna,:class => 'form-control' %>
+              </div>
+              <div class="field form-group col-md-6">
+              <% finalidad={'Enfermedad General'=> 'Enfermedad General',
+                            'Lesión por agresión'=> 'Lesión por agresión',
+                            'otros'=> 'otros',} %>
+                <%= f.label :finalidad_de_la_consulta %><br>
+                <%= f.select :finalidad,finalidad,:class => 'form-control' %>
+              </div>
+              <div class="field form-group">
+                <%= f.label :diagnostico_principal %><br>
+                <%= f.text_area :dxprincipal,:class => 'form-control' %>
+              </div>
+          </div>
+          <div class="tab-pane" id="odontograma">
+            <p>
+              Howdy, I'm in Section 3.
+            </p>
+          </div>
+          <div class="tab-pane" id="tratamientos">
+            <p>
+              Howdy, I'm in Section 5.
+            </p>
+          </div>
+          <div class="tab-pane" id="imagenes">
+            <p>
+              Howdy, I'm in Section 6.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  <div class="actions">
+    <% if can? :create, @procedure %>
+    <%= f.submit "Crear Encuentro Odontologico" ,:class => 'btn btn-primary'%>
+    <% end %>
+  </div>
+<% end %>
+<br>
+</div></div></div>
