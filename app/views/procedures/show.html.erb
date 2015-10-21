@@ -1,264 +1,335 @@
 <!-- <p id="notice"><%= notice %></p>
  -->
-<p>
-  <strong>Patient:</strong>
-  <%= @procedure.patient %>
-</p>
 
-<p>
-  <strong>Feccreacion:</strong>
-  <%= @procedure.feccreacion %>
-</p>
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-condensed">
+        <!-- <thead>
+          <tr>
+            <th>
+              #
+            </th>
+            <th>
+              Product
+            </th>
+            <th>
+              Payment Taken
+            </th>
+            <th>
+              Status
+            </th>
+          </tr>
+        </thead> -->
+        <tbody>
+          
+          <tr class="active">
+            <td colspan="2">
+              <p>
+                <strong>Patient:</strong>
+                <%= @procedure.patient %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Feccreacion:</strong>
+                <%= @procedure.feccreacion %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Horacreacion:</strong>
+                <%= @procedure.horacreacion %>
+              </p>
+            </td>
+            
+          </tr>
+          <tr class="active">
+            <td colspan="2">
+              <p>
+                <strong>Employee:</strong>
+                <%= @procedure.employee %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Appointment:</strong>
+                <%= @procedure.appointment %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Grupo:</strong>
+                <%= @procedure.grupo %>
+              </p>
+            </td>
+          </tr>
+          <tr class="bg-primary">
+            <td colspan="4"><h4>Amamesis</h4></td>
+          </tr>
+          <tr class="success">
+            <td>
+              <p>
+                <strong>Tratamiento:</strong>
+                <%= @procedure.tratamiento %>
+              </p>  
+            </td>
+            <td>
+              <p>
+                <strong>Medicamentos:</strong>
+                <%= @procedure.medicamentos %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Alergias:</strong>
+                <%= @procedure.alergias %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Hemorragias:</strong>
+                <%= @procedure.hemorragias %>
+              </p>
+            </td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Irradiaciones:</strong>
+              <%= @procedure.irradiaciones %>
+            </p></td>
 
-<p>
-  <strong>Horacreacion:</strong>
-  <%= @procedure.horacreacion %>
-</p>
+            <td><p>
+              <strong>Sinusitis:</strong>
+              <%= @procedure.sinusitis %>
+            </p></td>
 
-<p>
-  <strong>Employee:</strong>
-  <%= @procedure.employee %>
-</p>
+            <td><p>
+              <strong>Respiratorias:</strong>
+              <%= @procedure.respiratorias %>
+            </p></td>
 
-<p>
-  <strong>Appointment:</strong>
-  <%= @procedure.appointment %>
-</p>
+            <td><p>
+              <strong>Cardiopatias:</strong>
+              <%= @procedure.cardiopatias %>
+            </p></td>
 
-<p>
-  <strong>Grupo:</strong>
-  <%= @procedure.grupo %>
-</p>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Diabetes:</strong>
+              <%= @procedure.diabetes %>
+            </p></td>
 
-<p>
-  <strong>Tratamiento:</strong>
-  <%= @procedure.tratamiento %>
-</p>
+            <td><p>
+              <strong>Fiebre:</strong>
+              <%= @procedure.fiebre %>
+            </p></td>
 
-<p>
-  <strong>Medicamentos:</strong>
-  <%= @procedure.medicamentos %>
-</p>
+            <td><p>
+              <strong>Hepatitis:</strong>
+              <%= @procedure.hepatitis %>
+            </p></td>
 
-<p>
-  <strong>Alergias:</strong>
-  <%= @procedure.alergias %>
-</p>
+            <td><p>
+              <strong>Hipertension:</strong>
+              <%= @procedure.hipertension %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Otrasenfermedades:</strong>
+              <%= @procedure.otrasenfermedades %>
+            </p></td>
 
-<p>
-  <strong>Hemorragias:</strong>
-  <%= @procedure.hemorragias %>
-</p>
+            <td><p>
+              <strong>Cepillado:</strong>
+              <%= @procedure.cepillado %>
+            </p></td>
 
-<p>
-  <strong>Irradiaciones:</strong>
-  <%= @procedure.irradiaciones %>
-</p>
+            <td><p>
+              <strong>Hilo:</strong>
+              <%= @procedure.hilo %>
+            </p></td>
 
-<p>
-  <strong>Sinusitis:</strong>
-  <%= @procedure.sinusitis %>
-</p>
+            <td><p>
+              <strong>Otros:</strong>
+              <%= @procedure.otros %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td colspan="4">
+              <p>
+                <strong>Obsanamnesis:</strong>
+                <%= @procedure.obsanamnesis %>
+              </p>
+            </td>
+          </tr>
+          <tr class="bg-primary">
+            <td colspan="4"><h4>Examen Fisico Estomatologico</h4></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Temperatura:</strong>
+              <%= @procedure.temperatura %>
+            </p></td>
 
-<p>
-  <strong>Respiratorias:</strong>
-  <%= @procedure.respiratorias %>
-</p>
+            <td><p>
+              <strong>Pulso:</strong>
+              <%= @procedure.pulso %>
+            </p></td>
 
-<p>
-  <strong>Cardiopatias:</strong>
-  <%= @procedure.cardiopatias %>
-</p>
+            <td><p>
+              <strong>Tension:</strong>
+              <%= @procedure.tension %>
+            </p></td>
 
-<p>
-  <strong>Diabetes:</strong>
-  <%= @procedure.diabetes %>
-</p>
+            <td><p>
+              <strong>Respiracion:</strong>
+              <%= @procedure.respiracion %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Mandibula:</strong>
+              <%= @procedure.mandibula %>
+            </p></td>
 
-<p>
-  <strong>Fiebre:</strong>
-  <%= @procedure.fiebre %>
-</p>
+            <td><p>
+              <strong>Labios:</strong>
+              <%= @procedure.labios %>
+            </p></td>
 
-<p>
-  <strong>Hepatitis:</strong>
-  <%= @procedure.hepatitis %>
-</p>
+            <td><p>
+              <strong>Lengua:</strong>
+              <%= @procedure.lengua %>
+            </p></td>
 
-<p>
-  <strong>Hipertension:</strong>
-  <%= @procedure.hipertension %>
-</p>
+            <td><p>
+              <strong>Paladar:</strong>
+              <%= @procedure.paladar %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Boca:</strong>
+              <%= @procedure.boca %>
+            </p></td>
 
-<p>
-  <strong>Otrasenfermedades:</strong>
-  <%= @procedure.otrasenfermedades %>
-</p>
+            <td><p>
+              <strong>Carrillos:</strong>
+              <%= @procedure.carrillos %>
+            </p></td>
 
-<p>
-  <strong>Cepillado:</strong>
-  <%= @procedure.cepillado %>
-</p>
+            <td><p>
+              <strong>Glandulas:</strong>
+              <%= @procedure.glandulas %>
+            </p></td>
 
-<p>
-  <strong>Hilo:</strong>
-  <%= @procedure.hilo %>
-</p>
+            <td><p>
+              <strong>Maxilares:</strong>
+              <%= @procedure.maxilares %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Senosmaxilares:</strong>
+              <%= @procedure.senosmaxilares %>
+            </p></td>
 
-<p>
-  <strong>Otros:</strong>
-  <%= @procedure.otros %>
-</p>
+            <td><p>
+              <strong>Masticadores:</strong>
+              <%= @procedure.masticadores %>
+            </p></td>
 
-<p>
-  <strong>Obsanamnesis:</strong>
-  <%= @procedure.obsanamnesis %>
-</p>
+            <td><p>
+              <strong>Nervioso:</strong>
+              <%= @procedure.nervioso %>
+            </p></td>
 
-<p>
-  <strong>Temperatura:</strong>
-  <%= @procedure.temperatura %>
-</p>
+            <td><p>
+              <strong>Vascular:</strong>
+              <%= @procedure.vascular %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Linfatico:</strong>
+              <%= @procedure.linfatico %>
+            </p></td>
 
-<p>
-  <strong>Pulso:</strong>
-  <%= @procedure.pulso %>
-</p>
+            <td><p>
+              <strong>Oclusion:</strong>
+              <%= @procedure.oclusion %>
+            </p></td>
 
-<p>
-  <strong>Tension:</strong>
-  <%= @procedure.tension %>
-</p>
+            <td colspan="2"><p>
+              <strong>Obsfisico:</strong>
+              <%= @procedure.obsfisico %>
+            </p></td>
+          </tr>
+          <tr class="bg-primary">
+            <td colspan="4"><h4>Examen Dental</h4></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Abrasion:</strong>
+              <%= @procedure.abrasion %>
+            </p></td>
 
-<p>
-  <strong>Respiracion:</strong>
-  <%= @procedure.respiracion %>
-</p>
+            <td><p>
+              <strong>Placacalificada:</strong>
+              <%= @procedure.placacalificada %>
+            </p></td>
 
-<p>
-  <strong>Mandibula:</strong>
-  <%= @procedure.mandibula %>
-</p>
+            <td><p>
+              <strong>Pulpar:</strong>
+              <%= @procedure.pulpar %>
+            </p></td>
 
-<p>
-  <strong>Labios:</strong>
-  <%= @procedure.labios %>
-</p>
+            <td><p>
+              <strong>Placablanda:</strong>
+              <%= @procedure.placablanda %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Fluorosis:</strong>
+              <%= @procedure.fluorosis %>
+            </p></td>
 
-<p>
-  <strong>Lengua:</strong>
-  <%= @procedure.lengua %>
-</p>
+            <td><p>
+              <strong>Manchas:</strong>
+              <%= @procedure.manchas %>
+            </p></td>
 
-<p>
-  <strong>Paladar:</strong>
-  <%= @procedure.paladar %>
-</p>
+            <td colspan="2"><p>
+              <strong>Obsdental:</strong>
+              <%= @procedure.obsdental %>
+            </p></td>
+          </tr>
+          <tr class="success">
+            <td><p>
+              <strong>Causaexterna:</strong>
+              <%= @procedure.causaexterna %>
+            </p></td>
 
-<p>
-  <strong>Boca:</strong>
-  <%= @procedure.boca %>
-</p>
+            <td><p>
+              <strong>Finalidad:</strong>
+              <%= @procedure.finalidad %>
+            </p></td>
 
-<p>
-  <strong>Carrillos:</strong>
-  <%= @procedure.carrillos %>
-</p>
+            <td colspan="2"><p>
+              <strong>Dxprincipal:</strong>
+              <%= @procedure.dxprincipal %>
+            </p></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Glandulas:</strong>
-  <%= @procedure.glandulas %>
-</p>
-
-<p>
-  <strong>Maxilares:</strong>
-  <%= @procedure.maxilares %>
-</p>
-
-<p>
-  <strong>Senosmaxilares:</strong>
-  <%= @procedure.senosmaxilares %>
-</p>
-
-<p>
-  <strong>Masticadores:</strong>
-  <%= @procedure.masticadores %>
-</p>
-
-<p>
-  <strong>Nervioso:</strong>
-  <%= @procedure.nervioso %>
-</p>
-
-<p>
-  <strong>Vascular:</strong>
-  <%= @procedure.vascular %>
-</p>
-
-<p>
-  <strong>Linfatico:</strong>
-  <%= @procedure.linfatico %>
-</p>
-
-<p>
-  <strong>Oclusion:</strong>
-  <%= @procedure.oclusion %>
-</p>
-
-<p>
-  <strong>Obsfisico:</strong>
-  <%= @procedure.obsfisico %>
-</p>
-
-<p>
-  <strong>Abrasion:</strong>
-  <%= @procedure.abrasion %>
-</p>
-
-<p>
-  <strong>Placacalificada:</strong>
-  <%= @procedure.placacalificada %>
-</p>
-
-<p>
-  <strong>Pulpar:</strong>
-  <%= @procedure.pulpar %>
-</p>
-
-<p>
-  <strong>Placablanda:</strong>
-  <%= @procedure.placablanda %>
-</p>
-
-<p>
-  <strong>Fluorosis:</strong>
-  <%= @procedure.fluorosis %>
-</p>
-
-<p>
-  <strong>Manchas:</strong>
-  <%= @procedure.manchas %>
-</p>
-
-<p>
-  <strong>Obsdental:</strong>
-  <%= @procedure.obsdental %>
-</p>
-
-<p>
-  <strong>Causaexterna:</strong>
-  <%= @procedure.causaexterna %>
-</p>
-
-<p>
-  <strong>Finalidad:</strong>
-  <%= @procedure.finalidad %>
-</p>
-
-<p>
-  <strong>Dxprincipal:</strong>
-  <%= @procedure.dxprincipal %>
-</p>
-
-<%= link_to 'Edit', edit_procedure_path(@procedure) %> |
-<%= link_to 'Back', procedures_path %>
+<%= link_to 'Editar', edit_procedure_path(@procedure) %> |
+<%= link_to 'Atras', procedures_path %>
+<br><br><br>
