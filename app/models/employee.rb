@@ -1,8 +1,12 @@
 class Employee < ActiveRecord::Base
+  has_many :procedures
   belongs_to :position
   belongs_to :user 
-  has_many :procedures
+  #attr_accessible :employee_id
   accepts_nested_attributes_for :procedures
+
+  has_attached_file :avatar, styles: { medium: '200x200>', thumb: '48x48>' }
+  validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   # Confirmamos el email y validamos que no sean vacios con presence
   # mostramos el mensaje de error con message
   validates :email , presence: { message: " es requerido"}  , confirmation: true

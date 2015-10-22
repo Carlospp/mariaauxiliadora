@@ -1,26 +1,9 @@
 <!-- <p id="notice"><%= notice %></p>
  -->
-
  <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 table-responsive">
       <table class="table table-condensed">
-        <!-- <thead>
-          <tr>
-            <th>
-              #
-            </th>
-            <th>
-              Product
-            </th>
-            <th>
-              Payment Taken
-            </th>
-            <th>
-              Status
-            </th>
-          </tr>
-        </thead> -->
         <tbody>
           
           <tr class="active">
@@ -323,6 +306,36 @@
               <strong>Dxprincipal:</strong>
               <%= @procedure.dxprincipal %>
             </p></td>
+          </tr>
+          <tr class="bg-primary">
+            <td colspan="4"><h4>Odontograma</h4></td>
+          </tr>
+          <tr class="success">
+            <td colspan="4">
+              <%= image_tag @procedure.odontograma , :class => 'img-responsive center-block'%>
+            </td>
+          </tr>
+          <tr class="bg-primary">
+            <td colspan="4"><h4>Placas</h4></td>
+          </tr>
+          <tr class="success">
+            <td colspan="2">
+              <%= image_tag @procedure.placa1.url(:medium), :class => 'img-responsive center-block'%>
+            </td>
+            <td colspan="2">
+              <%= image_tag @procedure.placa2.url(:medium), :class => 'img-responsive center-block' %>
+            </td>
+          </tr>
+          <tr class="bg-primary">
+            <td colspan="4"><h4>Antes y Despues</h4></td>
+          </tr>
+          <tr class="success">
+            <td colspan="2">
+              <%= image_tag @procedure.actual.url(:medium) , :class => 'img-responsive center-block'%>
+            </td>
+            <td colspan="2">
+              <%= image_tag @procedure.final.url(:medium) , :class => 'img-responsive center-block'%>
+            </td>
           </tr>
         </tbody>
       </table>

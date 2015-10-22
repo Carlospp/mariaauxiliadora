@@ -38,7 +38,7 @@ gem 'will_paginate', '~> 3.0.6'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

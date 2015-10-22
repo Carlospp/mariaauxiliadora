@@ -8,6 +8,7 @@
 <table class="table table-bordered table-condensed table-hover">
   <thead>
     <tr>
+      <th>Foto</th>
       <th>Nombre y Apellido</th>
       <th>Dni</th>
       <th>Telefono</th>
@@ -23,6 +24,7 @@
   <tbody>
     <% @employees.each do |employee| %>
       <tr>
+        <td><%= image_tag employee.avatar.url(:thumb) %></td>
         <td><%= employee.nombre+" "+employee.apellido %></td>
         <td><%= employee.dni %></td>
         <td><%= employee.telefono %></td>

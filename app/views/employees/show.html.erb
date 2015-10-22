@@ -1,82 +1,87 @@
-<h2 class="col-md-offset-5 text-primary">Datos de Empleado</h2>
-<p class="col-md-offset-5" id="notice"><%= notice %></p>
+<h2 class="col-md-offset-4 text-primary">Datos de Empleado</h2>
+<p class="col-md-offset-4" id="notice"><%= notice %></p>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-5">
-<p>
-  <strong>Nombre:</strong>
-  <%= @employee.nombre %>
-</p>
+  <div class="row center-block">
+    <div class="col-md-3 col-md-offset-3">
+      <%= image_tag @employee.avatar.url(:medium) %>
+    </div>
+    <div class="col-md-3 ">
+      <p>
+        <strong>Nombre:</strong>
+        <%= @employee.nombre %>
+      </p>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @employee.apellido %>
-</p>
+      <p>
+        <strong>Apellido:</strong>
+        <%= @employee.apellido %>
+      </p>
 
-<p>
-  <strong>Dni:</strong>
-  <%= @employee.dni %>
-</p>
+      <p>
+        <strong>Dni:</strong>
+        <%= @employee.dni %>
+      </p>
 
-<p>
-  <strong>Fecnac:</strong>
-  <%= @employee.fecnac %>
-</p>
+      <p>
+        <strong>Fecnac:</strong>
+        <%= @employee.fecnac %>
+      </p>
 
-<p>
-  <strong>Sexo:</strong>
-  <%= @employee.sexo %>
-</p>
+      <p>
+        <strong>Sexo:</strong>
+        <%= @employee.sexo %>
+      </p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @employee.telefono %>
-</p>
+      <p>
+        <strong>Telefono:</strong>
+        <%= @employee.telefono %>
+      </p>
 
-<p>
-  <strong>Celular:</strong>
-  <%= @employee.celular %>
-</p>
+      <p>
+        <strong>Celular:</strong>
+        <%= @employee.celular %>
+      </p>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @employee.direccion %>
-</p>
+      <p>
+        <strong>Direccion:</strong>
+        <%= @employee.direccion %>
+      </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
+      <p>
+        <strong>Email:</strong>
+        <%= @employee.email %>
+      </p>
 
-<p>
-  <strong>Fecingreso:</strong>
-  <%= @employee.fecingreso %>
-</p>
+      <p>
+        <strong>Fecingreso:</strong>
+        <%= @employee.fecingreso %>
+      </p>
 
-<p>
-  <strong>Estado:</strong>
-  <%= @employee.estado %>
-</p>
+      <p>
+        <strong>Estado:</strong>
+        <%= @employee.estado %>
+      </p>
 
-<p>
-  <strong>Codcop:</strong>
-  <%= @employee.codCOP %>
-</p>
+      <p>
+        <strong>Codcop:</strong>
+        <%= @employee.codCOP %>
+      </p>
 
-<p>
-  <strong>Position:</strong>
-  <%= @employee.position %>
-</p>
+      <p>
+        <strong>Position:</strong>
+        <%= @employee.position %>
+      </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @employee.user %>
-</p>
-<% if can? :update, @patients %>
-    <%= link_to 'Editar', edit_employee_path(@employee) %> |
-  <% end %>
+      <p>
+        <strong>User:</strong>
+        <%= @employee.user %>
+      </p>
+      <% if can? :update, @patients %>
+        <%= link_to 'Editar', edit_employee_path(@employee) %> |
+      <% end %>
 
-<%= link_to 'Atras', employees_path %>
-</div>
-</div>
+      <%= link_to 'Atras', employees_path %>
+    </div>
+    
+  </div>
+
 </div>

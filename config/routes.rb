@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
 
-
   resources :procedures
   resources :patients
   resources :employees

@@ -508,9 +508,12 @@
               </div>
           </div>
           <div class="tab-pane" id="odontograma">
-            <p>
-              Howdy, I'm in Section 3.
-            </p>
+          <H3 class="bg-primary">ODONTOGRAMA</H3>
+              <div class="field">
+                <%= f.label :Agregar_odontograma %>
+                <%= f.file_field :odontograma %>
+              </div>
+              <br><br><br>
           </div>
           <div class="tab-pane" id="tratamientos">
             <p>
@@ -518,9 +521,26 @@
             </p>
           </div>
           <div class="tab-pane" id="imagenes">
-            <p>
-              Howdy, I'm in Section 6.
-            </p>
+              <H3 class="bg-primary">SITUACIÓN ACTUAL</H3>
+              <div class="field">
+                <%= f.label :elegir_imagen_a_cargar %>
+                <%= f.file_field :actual %>
+              </div>
+              <H3 class="bg-primary">TRATAMIENTO FINALIZADO</H3>
+              <div class="field">
+                <%= f.label :elegir_imagen_a_cargar %>
+                <%= f.file_field :final %>
+              </div>
+              <H3 class="bg-primary">PLACAS</H3>
+              <div class="field">
+                <%= f.label :elegir_imagen_a_cargar%>
+                <%= f.file_field :placa1 %>
+              </div>
+              <div class="field">
+                <%= f.label :elegir_imagen_a_cargar %>
+                <%= f.file_field :placa2 %>
+              </div>
+               <br><br>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151018043915) do
+ActiveRecord::Schema.define(version: 20151022145312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,12 @@ ActiveRecord::Schema.define(version: 20151018043915) do
     t.string   "codCOP"
     t.integer  "position_id"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "employees", ["position_id"], name: "index_employees_on_position_id", using: :btree
@@ -115,8 +119,28 @@ ActiveRecord::Schema.define(version: 20151018043915) do
     t.string   "causaexterna"
     t.string   "finalidad"
     t.string   "dxprincipal"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "actual_file_name"
+    t.string   "actual_content_type"
+    t.integer  "actual_file_size"
+    t.datetime "actual_updated_at"
+    t.string   "final_file_name"
+    t.string   "final_content_type"
+    t.integer  "final_file_size"
+    t.datetime "final_updated_at"
+    t.string   "odontograma_file_name"
+    t.string   "odontograma_content_type"
+    t.integer  "odontograma_file_size"
+    t.datetime "odontograma_updated_at"
+    t.string   "placa1_file_name"
+    t.string   "placa1_content_type"
+    t.integer  "placa1_file_size"
+    t.datetime "placa1_updated_at"
+    t.string   "placa2_file_name"
+    t.string   "placa2_content_type"
+    t.integer  "placa2_file_size"
+    t.datetime "placa2_updated_at"
   end
 
   add_index "procedures", ["employee_id"], name: "index_procedures_on_employee_id", using: :btree
