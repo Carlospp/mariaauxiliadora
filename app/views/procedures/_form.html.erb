@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12 col-md-offset-0">
-<%= form_for(@procedure) do |f| %>
+<%= simple_form_for(@procedure) do |f| %>
   <% if @procedure.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@procedure.errors.count, "error") %> evitaron que se pueda crear correctamente:</h2>
@@ -28,7 +28,7 @@
   </div>
   <div class="field form-group col-md-8">
     <%= f.label :paciente_id %><br>
-    <%= f.collection_select :employee_id ,Patient.all,:id,:nombre,:class => 'form-control' , :include_blank => false %>
+    <%= f.collection_select :patient_id ,Patient.all,:id,:nombre,:class => 'form-control' , :include_blank => false %>
   </div>
   
   <div class="field form-group col-md-4">

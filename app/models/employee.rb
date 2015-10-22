@@ -1,6 +1,8 @@
 class Employee < ActiveRecord::Base
   belongs_to :position
   belongs_to :user 
+  has_many :procedures
+  accepts_nested_attributes_for :procedures
   # Confirmamos el email y validamos que no sean vacios con presence
   # mostramos el mensaje de error con message
   validates :email , presence: { message: " es requerido"}  , confirmation: true

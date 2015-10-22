@@ -4,12 +4,13 @@ Este trabajo es un proyecto de tesis de la carrera de Ing. de sistemas de la uni
 Alas Peruanas.
 
 Estoy usando para el desarrollo :
-*Ruby 2.2.2
+* Ruby 2.2.2
 
-*Bootstrap
+* Bootstrap
 
 Agradecimiento especial a las personas q me ayudaron respondiendo a mis consultas sobre el desarrollo en ruby:
 
 * Joel Ibaceta 
-*Kattya Cuevas
+* Kattya Cuevas
+
 Si deseas ver la pagina ingresa a http://www.mariaauxiliadora.herokuapp.com

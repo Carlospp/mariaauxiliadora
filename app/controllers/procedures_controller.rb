@@ -21,6 +21,7 @@ class ProceduresController < ApplicationController
   # GET /procedures/new
   def new
     @procedure = Procedure.new
+    #@procedure.procedures.build
   end
 
   # GET /procedures/1/edit
