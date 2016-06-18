@@ -1,7 +1,7 @@
 class Patient < ActiveRecord::Base
   has_many :procedures
 
-  #attr_accessible :nombre
+  attr_accessor :patient
 
   validates :email , presence: { message: " es requerido"}  , confirmation: true
   validates :nombre , presence: { message: " es requerido"} , confirmation: true

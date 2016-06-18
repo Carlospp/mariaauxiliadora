@@ -2,6 +2,8 @@ class Procedure < ActiveRecord::Base
   belongs_to :patient
   belongs_to :employee
   after_initialize :default_values
+  attr_accessor :employee
+  attr_accessor :patient
 
   private
     def default_values

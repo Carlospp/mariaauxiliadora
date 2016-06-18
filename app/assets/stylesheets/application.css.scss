@@ -62,7 +62,7 @@ $break-large: 1200px;
 .icon-bar{
     color:#fff !important;
 }
-select.date,#employee_sexo,#employee_estado,#procedure_grupo,#patient_fecnac_1i,
+select.date,#employee_estado,#procedure_grupo,#patient_fecnac_1i,
         #patient_fecnac_2i,#patient_fecnac_3i{
     width:32.8%;
     height: 30px;
@@ -70,6 +70,7 @@ select.date,#employee_sexo,#employee_estado,#procedure_grupo,#patient_fecnac_1i,
     border: 1px solid #cccccc;
     background-color: #ffffff;
 }
+
 select#procedure_feccreacion_1i,select#procedure_feccreacion_3i{
     width:29%;
     height: 30px;

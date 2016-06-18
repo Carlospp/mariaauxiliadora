@@ -57,8 +57,10 @@
     <%= f.date_select :fecingreso , { :start_year => 2000, :end_year => 2015, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] } ,:class => 'date datetest'%>
   </div>
   <div class="field form-group col-md-12">
+    <% estado={'Activo'=> 'Activo',
+                      'Inactivo'=> 'Inactivo',} %>
     <%= f.label :estado %><br>
-    <%= f.text_field :estado,:class => 'form-control' %>
+    <%= f.select :estado,estado,:class => 'form-control' %>
   </div>
   <div class="actions col-md-12">
     <%= f.submit "Crear Paciente" ,:class => 'btn btn-primary' %>

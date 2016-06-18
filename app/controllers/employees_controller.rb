@@ -16,6 +16,8 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
+    @empleado = Employee.find(params[:id]);
+    @e = Position.find(@empleado.position_id);
   end
 
   # GET /employees/new

@@ -16,6 +16,9 @@ class PatientsController < ApplicationController
   # GET /patients/1
   # GET /patients/1.json
   def show
+
+    @paciente = Patient.find(params[:id])
+    @tratamiento = Procedure.where(patient_id: @paciente.id)
   end
 
   # GET /patients/new

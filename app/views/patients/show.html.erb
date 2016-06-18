@@ -2,65 +2,124 @@
 <p class="col-md-offset-5" id="notice"><%= notice %></p>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 col-md-offset-5">
-<p>
-  <strong>Nombre:</strong>
-  <%= @patient.nombre %>
-</p>
-
-<p>
-  <strong>Apellido:</strong>
-  <%= @patient.apellido %>
-</p>
-
-<p>
-  <strong>Dni:</strong>
-  <%= @patient.dni %>
-</p>
-
-<p>
-  <strong>Fecnac:</strong>
-  <%= @patient.fecnac %>
-</p>
-
-<p>
-  <strong>Sexo:</strong>
-  <%= @patient.sexo %>
-</p>
-
-<p>
-  <strong>Telefono:</strong>
-  <%= @patient.telefono %>
-</p>
-
-<p>
-  <strong>Celular:</strong>
-  <%= @patient.celular %>
-</p>
-
-<p>
-  <strong>Direccion:</strong>
-  <%= @patient.direccion %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @patient.email %>
-</p>
-
-<p>
-  <strong>Fecha Ingreso:</strong>
-  <%= @patient.fecingreso %>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @patient.estado %>
-</p>
-  <% if can? :update, @patients %>
-      <%= link_to 'Editar', edit_patient_path(@patient) %> |
-  <% end %>
-<%= link_to 'Atras', patients_path %>
+    <div class="col-md-12 table-responsive">
+      <table class="table table-condensed">
+        <tbody>
+          
+          <tr class="active">
+            <td >
+              <p>
+                <strong>Nombre:</strong>
+                <%= @patient.nombre %> <%= @patient.apellido %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Dni:</strong>
+                <%= @patient.dni %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Sexo:</strong>
+                <%= @patient.sexo %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Fecha nacimiento:</strong>
+                <%= @patient.fecnac %>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                <strong>Telefono:</strong>
+                <%= @patient.telefono %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Celular:</strong>
+                <%= @patient.celular %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Fecha Ingreso:</strong>
+                <%= @patient.fecingreso %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Email:</strong>
+                <%= @patient.email %>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <p>
+                <strong>Direccion:</strong>
+                <%= @patient.direccion %>
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong>Estado:</strong>
+                <%= @patient.estado %>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <% if can? :update, @patients %>
+          <%= link_to 'Editar', edit_patient_path(@patient) %> |
+      <% end %>
+    <%= link_to 'Atras', patients_path %>
+    </div>
+  </div>
 </div>
+
+
+<div class="container-fluid">
+<h3 class="col-md-offset-5 text-primary">Tratamientos realizados</h3>
+  <div class="row">
+    <div class="col-md-12 table-responsive">
+      <table class="table table-bordered table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Odontologo</th>
+            <th>Grupo</th>
+            <th>Causa</th>
+            <th>Finalidad</th>
+            <th>Dx principal</th>
+            <th></th>
+          </tr>
+        </thead>
+         <tbody>
+          <% @tratamiento.each do |tratamiento| %>
+            <tr>
+              <td><%= tratamiento.feccreacion %></td>
+              <td><%= tratamiento.employee_id %></td>
+              <td><%= tratamiento.grupo %></td>
+              <td><%= tratamiento.causaexterna %></td>
+              <td><%= tratamiento.finalidad %></td>
+              <td><%= tratamiento.dxprincipal %></td>
+              <td><%= link_to 'Mostrar', tratamiento %></td>
+            </tr>
+          <% end %>
+        </tbody>
+       
+      </table>
+    </div>
+  </div>
 </div>

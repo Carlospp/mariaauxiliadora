@@ -16,6 +16,9 @@ class ProceduresController < ApplicationController
   # GET /procedures/1
   # GET /procedures/1.json
   def show
+    @historia = Procedure.find(params[:id]);
+    @e = Employee.find(@historia.employee_id);
+    @paciente = Patient.find(@historia.patient_id);
   end
 
   # GET /procedures/new

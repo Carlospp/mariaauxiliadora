@@ -9,19 +9,19 @@
           <tr class="active">
             <td colspan="2">
               <p>
-                <strong>Patient:</strong>
-                <%= @procedure.patient %>
+                <strong>Paciente:</strong>
+                <%= @paciente.nombre+" "+@paciente.apellido %>
               </p>
             </td>
             <td>
               <p>
-                <strong>Feccreacion:</strong>
+                <strong>Fecha ingreso:</strong>
                 <%= @procedure.feccreacion %>
               </p>
             </td>
             <td>
               <p>
-                <strong>Horacreacion:</strong>
+                <strong>Hora ingreso:</strong>
                 <%= @procedure.horacreacion %>
               </p>
             </td>
@@ -30,13 +30,13 @@
           <tr class="active">
             <td colspan="2">
               <p>
-                <strong>Employee:</strong>
-                <%= @procedure.employee %>
+                <strong>Odontologo:</strong>
+                <%= @e.nombre+" "+@e.apellido %>
               </p>
             </td>
             <td>
               <p>
-                <strong>Appointment:</strong>
+                <strong>Cita:</strong>
                 <%= @procedure.appointment %>
               </p>
             </td>

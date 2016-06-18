@@ -6,45 +6,46 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12 table-responsive">
-<table class="table table-bordered table-condensed table-hover">
-  <thead>
-    <tr>
-      <th>Paciente</th>
-      <th>Fecha</th>
-      <th>Odontologo</th>
-      <th>Cita</th>
-      <th>Grupo</th>
-      <th>Causa</th>
-      <th>Finalidad</th>
-      <th>Dx principal</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <table class="table table-bordered table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Fecha</th>
+            <th>Odontologo</th>
+            <th>Cita</th>
+            <th>Grupo</th>
+            <th>Causa</th>
+            <th>Finalidad</th>
+            <th>Dx principal</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @procedures.each do |procedure| %>
-      <tr>
-        <td><%= procedure.patient %></td>
-        <td><%= procedure.feccreacion %></td>
-        <td><%= procedure.employee %></td>
-        <td><%= procedure.appointment %></td>
-        <td><%= procedure.grupo %></td>
-        <td><%= procedure.causaexterna %></td>
-        <td><%= procedure.finalidad %></td>
-        <td><%= procedure.dxprincipal %></td>
-        <td><%= link_to 'Mostrar', procedure %></td>
-        <% if can? :update, @procedure %>
-        <td><%= link_to 'Editar', edit_procedure_path(procedure) %></td>
-        <% end %>
-        <% if can? :destroy, @procedure %>
-        <td><%= link_to 'Eliminar', procedure, method: :delete, data: { confirm: 'esta seguro?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div></div>
-<% if can? :create, @procedure %>
-<%= link_to 'Nuevo Encuentro Odontologico', new_procedure_path %>
-<% end %>
+        <tbody>
+          <% @procedures.each do |procedure| %>
+            <tr>
+              <td><%= procedure.patient_id %></td>
+              <td><%= procedure.feccreacion %></td>
+              <td><%= procedure.employee_id %></td>
+              <td><%= procedure.appointment %></td>
+              <td><%= procedure.grupo %></td>
+              <td><%= procedure.causaexterna %></td>
+              <td><%= procedure.finalidad %></td>
+              <td><%= procedure.dxprincipal %></td>
+              <td><%= link_to 'Mostrar', procedure %></td>
+              <% if can? :update, @procedure %>
+              <td><%= link_to 'Editar', edit_procedure_path(procedure) %></td>
+              <% end %>
+              <% if can? :destroy, @procedure %>
+              <td><%= link_to 'Eliminar', procedure, method: :delete, data: { confirm: 'esta seguro?' } %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% if can? :create, @procedure %>
+  <%= link_to 'Nuevo Encuentro Odontologico', new_procedure_path %>
+  <% end %>
 </div>
